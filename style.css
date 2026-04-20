@@ -1,0 +1,133 @@
+/* Variables de diseño */
+:root {
+    --soft-pink: #fce4ec;
+    --medium-pink: #f8bbd0;
+    --dark-pink: #f06292;
+    --text-color: #5d4037;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff9fb;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header / Hero Section */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(252, 228, 236, 0.8), rgba(252, 228, 236, 0.8)), 
+                url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=1000'); /* Imagen de flores suave */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--dark-pink);
+    margin-bottom: 10px;
+}
+
+.badge {
+    background-color: var(--dark-pink);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: var(--dark-pink);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.3);
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(240, 98, 146, 0.4);
+}
+
+/* Contenido Principal */
+.container {
+    max-width: 1000px;
+    margin: -50px auto 50px;
+    padding: 0 20px;
+}
+
+.card-highlight {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon-pink {
+    font-size: 2.5rem;
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+}
+
+.grid-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.info-box {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid var(--soft-pink);
+}
+
+.info-box h3 {
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+}
+
+.info-box ul {
+    list-style: none;
+}
+
+.info-box ul li::before {
+    content: "🌸";
+    margin-right: 10px;
+}
+
+.quote-section {
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+    color: var(--dark-pink);
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #ad8a8a;
+}
