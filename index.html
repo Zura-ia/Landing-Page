@@ -54,9 +54,125 @@
             </div>
             <div class="info-box">
                 <h3><i class="fa-solid fa-leaf"></i> Bienestar</h3>
-                <p>Pequeños cambios en la alimentación y el manejo del estrés pueden marcar una gran diferencia en el
-                    día a día.</p>
+                <p>No todos los cólicos son iguales. Aprende a identificar tu nivel de dolor y cuándo buscar ayuda.</p>
             </div>
+        </section>
+
+        <!-- Semáforo del Dolor -->
+        <section class="pain-semaforo">
+            <h2 class="section-title">Semáforo del Dolor</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: var(--text-light);">Identifica la intensidad de tu
+                dolor y cuándo buscar ayuda profesional.</p>
+            <div class="semaforo-grid">
+                <div class="semaforo-card leve">
+                    <div class="semaforo-circle" style="background: #4caf50;">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3>Leve</h3>
+                    <p>Molestia tipo cólico, no interfiere con tu rutina. Mejora con calor o analgésicos suaves.</p>
+                    <span class="semaforo-status" style="background: #e8f5e9; color: #2e7d32;">Normal</span>
+                </div>
+                <div class="semaforo-card moderado">
+                    <div class="semaforo-circle" style="background: #ff9800;">
+                        <i class="fa-solid fa-face-meh"></i>
+                    </div>
+                    <h3>Moderado</h3>
+                    <p>Dolor más intenso, puede irradiarse. Necesitas reposo o medicación.</p>
+                    <span class="semaforo-status" style="background: #fff3e0; color: #e65100;">Si es frecuente, consulta
+                        al médico</span>
+                </div>
+                <div class="semaforo-card severo">
+                    <div class="semaforo-circle" style="background: #f44336;">
+                        <i class="fa-solid fa-face-frown"></i>
+                    </div>
+                    <h3>Severo</h3>
+                    <p>Dolor incapacitante, náuseas o desmayos. No mejora con analgésicos comunes.</p>
+                    <span class="semaforo-status" style="background: #ffebee; color: #c62828;">Consulta al médico lo más
+                        pronto posible</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guía de Coágulos Menstruales - Visualización Inmersiva -->
+        <section class="clot-guide">
+            <h2 class="section-title">Guía de Coágulos Menstruales</h2>
+            <p style="text-align: center; margin-bottom: 10px; color: var(--text-light);">
+                Usa una moneda de <strong>$500 pesos chilenos</strong> como referencia para evaluar el tamaño de los
+                coágulos.
+            </p>
+
+            <!-- Visualización central: Coágulo animado + Moneda -->
+            <div class="clot-showcase">
+                <!-- Columna izquierda: Coágulo animado -->
+                <div class="clot-showcase-left">
+                    <div class="clot-animated-container">
+                        <div class="clot-animated" id="clotMain">
+                            <div class="clot-animated-inner"></div>
+                            <div class="clot-animated-glow"></div>
+                            <div class="clot-particle p1"></div>
+                            <div class="clot-particle p2"></div>
+                            <div class="clot-particle p3"></div>
+                            <div class="clot-particle p4"></div>
+                            <div class="clot-particle p5"></div>
+                        </div>
+                        <div class="clot-size-indicator" id="clotSizeLabel">Pequeño</div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Moneda de referencia -->
+                <div class="clot-showcase-right">
+                    <div class="coin-showcase">
+                        <div class="coin-500 coin-animated" id="coinRef">
+                            <div class="coin-500-outer">
+                                <div class="coin-500-inner">
+                                    <span class="coin-500-value">$500</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coin-label">🪙 Referencia</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control deslizante de tamaño -->
+            <div class="clot-slider-container">
+                <span class="clot-slider-label">Menor</span>
+                <input type="range" min="0" max="100" value="20" class="clot-slider" id="clotSizeSlider">
+                <span class="clot-slider-label">Mayor</span>
+            </div>
+
+            <!-- Información dinámica debajo -->
+            <div class="clot-info-panel" id="clotInfoPanel">
+                <div class="clot-info-card" id="clotInfoSmall">
+                    <div class="clot-info-icon">🩸</div>
+                    <h3>Coágulos Pequeños</h3>
+                    <p>Más pequeños que la moneda de $500. Son comunes durante los días de flujo abundante y
+                        generalmente no representan una preocupación. El tejido endometrial se desprende de forma
+                        natural.</p>
+                    <span class="clot-status" style="background: #e8f5e9; color: #2e7d32;">Sin preocupación</span>
+                </div>
+                <div class="clot-info-card" id="clotInfoMedium" style="display: none;">
+                    <div class="clot-info-icon">🩸</div>
+                    <h3>Coágulos Medianos</h3>
+                    <p>Similar al tamaño de la moneda de $500. Pueden aparecer en días de flujo muy abundante. Si es
+                        recurrente, vale la pena llevar un registro y comentarlo con tu médico.</p>
+                    <span class="clot-status" style="background: #fff3e0; color: #e65100;">Observación</span>
+                </div>
+                <div class="clot-info-card" id="clotInfoLarge" style="display: none;">
+                    <div class="clot-info-icon">🩸</div>
+                    <h3>Coágulos Grandes</h3>
+                    <p>Más grandes que la moneda de $500. Si son recurrentes, podrían indicar un sangrado menstrual
+                        abundante (menorragia) que requiere evaluación médica para descartar condiciones como
+                        endometriosis, miomas o trastornos hormonales.</p>
+                    <span class="clot-status" style="background: #ffebee; color: #c62828;">Consulta a tu médico</span>
+                </div>
+            </div>
+
+            <p class="clot-disclaimer">
+                <i class="fa-solid fa-circle-info"></i>
+                Esta es solo una referencia visual. Si tienes dudas sobre tu salud menstrual, consulta siempre con un
+                profesional de la salud.
+            </p>
         </section>
 
         <section class="quote-section">
@@ -135,6 +251,102 @@
     <footer>
         <p>Creado con ❤️ para ti — 2026</p>
     </footer>
+
+    <!-- Script para el control interactivo de coágulos -->
+    <script>
+        const slider = document.getElementById('clotSizeSlider');
+        const clotMain = document.getElementById('clotMain');
+        const clotSizeLabel = document.getElementById('clotSizeLabel');
+        const infoSmall = document.getElementById('clotInfoSmall');
+        const infoMedium = document.getElementById('clotInfoMedium');
+        const infoLarge = document.getElementById('clotInfoLarge');
+        const coinRef = document.getElementById('coinRef');
+
+        // Tamaños base del coágulo
+        const MIN_SIZE = 60;   // px - pequeño
+        const MAX_SIZE = 200;  // px - grande
+
+        // Colores según tamaño
+        const COLORS = {
+            small: { bg: 'radial-gradient(circle at 40% 35%, #ef9a9a, #e57373)', shadow: 'rgba(229, 115, 115, 0.4)' },
+            medium: { bg: 'radial-gradient(circle at 40% 35%, #ef9a9a, #d32f2f)', shadow: 'rgba(211, 47, 47, 0.4)' },
+            large: { bg: 'radial-gradient(circle at 35% 30%, #ef9a9a, #b71c1c)', shadow: 'rgba(183, 28, 28, 0.5)' }
+        };
+
+        function updateClotSize(value) {
+            const percent = value / 100;
+            const size = MIN_SIZE + (MAX_SIZE - MIN_SIZE) * percent;
+
+            // Actualizar tamaño del coágulo
+            clotMain.style.width = size + 'px';
+            clotMain.style.height = (size * 0.9) + 'px';
+
+            // Determinar categoría
+            let category, label;
+            if (percent < 0.33) {
+                category = 'small';
+                label = 'Pequeño';
+                infoSmall.style.display = 'block';
+                infoMedium.style.display = 'none';
+                infoLarge.style.display = 'none';
+                coinRef.style.transform = 'scale(1)';
+            } else if (percent < 0.66) {
+                category = 'medium';
+                label = 'Mediano';
+                infoSmall.style.display = 'none';
+                infoMedium.style.display = 'block';
+                infoLarge.style.display = 'none';
+                coinRef.style.transform = 'scale(1)';
+            } else {
+                category = 'large';
+                label = 'Grande';
+                infoSmall.style.display = 'none';
+                infoMedium.style.display = 'none';
+                infoLarge.style.display = 'block';
+                coinRef.style.transform = 'scale(0.85)';
+            }
+
+            clotSizeLabel.textContent = label;
+
+            // Actualizar color del coágulo
+            const inner = clotMain.querySelector('.clot-animated-inner');
+            const glow = clotMain.querySelector('.clot-animated-glow');
+            const color = COLORS[category];
+            inner.style.background = color.bg;
+            glow.style.boxShadow = `0 0 ${30 + percent * 40}px ${color.shadow}`;
+
+            // Actualizar clip-path para que sea más irregular al crecer
+            const irregularity = 5 + percent * 15;
+            const points = [
+                `${25 - percent * 5}% 0%`,
+                `${75 + percent * 5}% ${percent * 8}%`,
+                `${100}% ${30 + percent * 10}%`,
+                `${95 + percent * 3}% ${70 - percent * 5}%`,
+                `${80 - percent * 5}% ${100}%`,
+                `${30 + percent * 5}% ${95 - percent * 3}%`,
+                `${percent * 5}% ${75 - percent * 5}%`,
+                `${0}% ${25 + percent * 5}%`
+            ];
+            inner.style.clipPath = `polygon(${points.join(', ')})`;
+
+            // Actualizar partículas
+            const particles = clotMain.querySelectorAll('.clot-particle');
+            const particleSize = 4 + percent * 8;
+            particles.forEach((p, i) => {
+                p.style.width = particleSize + 'px';
+                p.style.height = particleSize + 'px';
+                const delay = i * 0.3;
+                p.style.animationDelay = delay + 's';
+            });
+        }
+
+        slider.addEventListener('input', function () {
+            updateClotSize(this.value);
+        });
+
+        // Inicializar con valor por defecto
+        updateClotSize(slider.value);
+    </script>
 
 </body>
 
