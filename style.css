@@ -60,6 +60,27 @@ body {
     font-weight: 600;
     font-size: 1.4rem;
     color: var(--dark-pink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--dark-pink);
 }
 
 .nav-links {
